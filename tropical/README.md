@@ -1,14 +1,13 @@
-# Color Splash Example
+# Custom object detection to predict fruits in custom dataset 
 
 This is an example showing the use of Mask RCNN in a real application.
-We train the model to detect balloons only, and then we use the generated 
-masks to keep balloons in color while changing the rest of the image to
-grayscale.
+this post in medium will help you to create an computer vision application 
 
 
-[This blog post](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46) describes this sample in more detail.
 
-![Balloon Color Splash](/assets/balloon_color_splash.gif)
+[This blog post](https://medium.com/@bernardo.acaldas/using-maskrcnn-to-predict-tropical-fruits-in-custom-dataset-4f079d05fbe1)
+
+
 
 
 ## Installation
@@ -20,13 +19,13 @@ From the [Releases page](https://github.com/matterport/Mask_RCNN/releases) page:
 Apply splash effect on an image:
 
 ```bash
-python3 balloon.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --image=<file name or URL>
+python3 custom-name-file.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --image=<file name or URL>
 ```
 
 Apply splash effect on a video. Requires OpenCV 3.2+:
 
 ```bash
-python3 balloon.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --video=<file name or URL>
+python3 custom-name.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --video=<file name or URL>
 ```
 
 
