@@ -13,20 +13,6 @@ this post in medium will help you to create an computer vision application
 ## Installation
 From the [Releases page](https://github.com/matterport/Mask_RCNN/releases) page:
 1. Download `mask_rcnn_balloon.h5`. Save it in the root directory of the repo (the `mask_rcnn` directory).
-2. Download `balloon_dataset.zip`. Expand it such that it's in the path `mask_rcnn/datasets/balloon/`.
-
-## Apply color splash using the provided weights
-Apply splash effect on an image:
-
-```bash
-python3 custom-name-file.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --image=<file name or URL>
-```
-
-Apply splash effect on a video. Requires OpenCV 3.2+:
-
-```bash
-python3 custom-name.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --video=<file name or URL>
-```
 
 
 ## Run Jupyter notebooks
