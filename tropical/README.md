@@ -5,7 +5,7 @@ this post in medium will help you to create an computer vision application
 
 
 
-[This blog post](https://medium.com/@bernardo.acaldas/using-maskrcnn-to-predict-tropical-fruits-in-custom-dataset-4f079d05fbe1)
+[Medium blog post](https://medium.com/@bernardo.acaldas/using-maskrcnn-to-predict-tropical-fruits-in-custom-dataset-4f079d05fbe1)
 
 
 
