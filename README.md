@@ -1,7 +1,7 @@
 # Custom object detection to predict fruits in custom dataset 
 
-This is an example showing the use of Mask RCNN in a real application.
-this post in medium will help you to create an computer vision application 
+This is an example showing the use of Mask RCNN in a real application, creating multiple class for classify some objects
+this post in medium will help you to create an computer vision application with multiple class.
 
 
 
