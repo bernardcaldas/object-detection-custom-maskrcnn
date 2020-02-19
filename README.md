@@ -12,4 +12,18 @@ this post in medium will help you to create an computer vision application with 
 
 ## Installation
 From the [Releases page](https://github.com/matterport/Mask_RCNN/releases) page:
-1. Download `mask_rcnn_balloon.h5`. Save it in the root directory of the repo (the `mask_rcnn` directory).
+
+Clone this repository https://github.com/matterport/Mask_RCNN.git
+
+Install dependencies
+
+pip3 install -r requirements.txt
+Run setup from the repository root directory
+
+python3 setup.py install
+Download pre-trained COCO weights (mask_rcnn_coco.h5) from the releases page.
+
+(Optional) To train or test on MS COCO install pycocotools from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
+
+Linux: https://github.com/waleedka/coco
+Windows: https://github.com/philferriere/cocoapi. You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
