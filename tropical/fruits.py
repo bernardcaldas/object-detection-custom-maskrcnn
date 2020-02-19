@@ -123,10 +123,15 @@ class fruitsDataset(utils.Dataset):
             # the outline of each object instance. These are stores in the
             # shape_attributes (see json format above)
             # The if condition is needed to support VIA versions 1.x and 2.x.
-            if type(a['regions']) is dict:
-                polygons = [r['shape_attributes'] for r in a['regions'].values()]
-            else:
-                polygons = [r['shape_attributes'] for r in a['regions']] 
+
+            polygons = [r['shape_attributes'] for r in a['regions'].values()]
+            class_names_str  = [r['region_attributes']['name'] for r in a['regions'].values()]
+            class_name_nums = []
+            for i in  class_names_str:
+                if i == 'orange':
+                    class_name_nums.append(1)
+                if i == 'pineapple':
+                    class_name_nums.append(2)
 
             # load_mask() needs the image size to convert polygons to masks.
             # Unfortunately, VIA doesn't include it in JSON, so we must read
@@ -140,7 +145,8 @@ class fruitsDataset(utils.Dataset):
                 image_id=a['filename'],  # use file name as a unique image id
                 path=image_path,
                 width=width, height=height,
-                polygons=polygons)
+                polygons=polygons,
+                class_list = np.array(class_name_nums))
 
     def load_mask(self, image_id):
         """Generate instance masks for an image.
@@ -163,10 +169,11 @@ class fruitsDataset(utils.Dataset):
             # Get indexes of pixels inside the polygon and set them to 1
             rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
             mask[rr, cc, i] = 1
-
+        class_array = info['class_list']
         # Return mask, and array of class IDs of each instance. Since we have
         # one class ID only, we return an array of 1s
-        return mask.astype(np.bool), np.ones([mask.shape[-1]], dtype=np.int32)
+        #return mask.astype(np.bool), np.ones([mask.shape[-1]], dtype=np.int32)
+       return mask.astype(np.bool), class_array
 
     def image_reference(self, image_id):
         """Return the path of the image."""
