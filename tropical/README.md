@@ -12,7 +12,7 @@ this post in medium will help you to create an computer vision application
 
 ## Results
 
-![orange prediction](https://github.com/bernardcaldas/object-detection-custom-maskrcnn/tropical/new-images/orange.png)
+![orange prediction](https://github.com/bernardcaldas/object-detection-custom-maskrcnn/blob/master/tropical/new-images/orange.png)
 
 
 ## Installation
